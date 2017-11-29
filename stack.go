@@ -5,10 +5,10 @@ type Stack struct {
 	out chan interface{}
 }
 
-func NewStack(size int) *Stack {
+func NewStack() *Stack {
 	s := &Stack{
-		in:  make(chan interface{}, size),
-		out: make(chan interface{}, size),
+		in:  make(chan interface{}),
+		out: make(chan interface{}),
 	}
 	go func() {
 		var last interface{}
