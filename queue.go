@@ -12,9 +12,7 @@ func NewQueue() *Queue {
 		out:  make(chan interface{}),
 		done: make(chan struct{}),
 	}
-	go func() {
-
-	}()
+	go q.run()
 	return q
 }
 
